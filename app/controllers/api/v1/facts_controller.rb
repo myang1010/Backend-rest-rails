@@ -31,7 +31,7 @@ class Api::V1::FactsController < ApplicationController
   def update
     # your code goes here
     if @fact.update(fact_params)
-        render json: @fact, status: 201
+        render json: @fact, status: 200
     else
         rendor json: { error: "The fact entry could not be found. #{@fact.errors.full_messages.to_sentence}"},
         status: 400  
